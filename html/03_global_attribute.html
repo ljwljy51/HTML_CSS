@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 draggable="true">움직일 수 있는 태그</h1>
+    <!--요소를 움직일 수 있음! false일 경우 그냥 요소 선택만 됨-->
+    <p lang="ko">대한민국</p>
+    <!--기본 언어 설정 가능. html lang이 en이고, 여긴 ko로 설정되어있으므로 번역을 사용할 경우, 이 부분이 번역될 것임-->
+    <p hidden>이 문장은 화면에 보이지 않습니다.</p>
+    <!-- 가려지게 할 수 있음-->
+    <a
+      href="https://google.com"
+      id="google"
+      title="클릭하면 구글 사이트로 이동합니다."
+      >구글</a
+    >
+    <br />
+    <!--줄바꿈-->
+    <label for="userId">사용자 아이디</label>
+    <!--label. for 속성을 통해 어느 태그와 연결되어있는지를 나타낼 수 있음. 시각장애인의 편의를 위해 중요-->
+    <input
+      type="text"
+      name=""
+      id="userId"
+    /><!--name은 다른 태그와 같은 값 사용 가능. 그러나, id 값은 unique해야 함. 즉, 키로써 사용됨-->
+    <br />
+    <p spellcheck="true" contenteditable="true">This is a paraggraph</p>
+    <!--spellcheck값이 true일 경우, 맞춤법이 틀렸을 때 빨간 줄이 표시됨. contenteditable을 통해 요소 수정할 수 있도록 할 수 있음-->
+    <p style="color: red; background-color: yellow">빨간색 문장입니다.</p>
+    <!--style 태그 통해 스타일 지정 가능. 색상 지정하는 방법은 다양함-->
+    <a href="" tabindex="1">네이버</a>
+    <!--탭을 통해 이동했을 때 어떤 순서로 가게 할 것인지-->
+    <a href="" tabindex="3">구글</a>
+    <a href="" tabindex="2">개발자의품격</a>
+    <button title="주문 버튼을 클릭하면 선택한 제품에 대한 주문이 진행됩니다.">
+      <!--버튼. title 속성을 통해 커서를 댔을 때 도움말처럼 정보 제공 가능-->
+      주문
+    </button>
+  </body>
+</html>
+<!--global attribute란, 모든 태그에서 사용할 수 있는 속성-->>

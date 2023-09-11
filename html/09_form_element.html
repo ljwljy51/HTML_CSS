@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- form 요소-->
+    <!-- 사용자로부터 데이터(정보)를 입력 받기 위한 HTML 요소들-->
+    <!-- input 태그의 경우, type에 따라 입력 양식 달라짐-->
+    <form action="/server/login">
+      <!--action 속성에 작성된 폼 정보를 전송할 서버 쪽 주소 기입. 이때 form 태그 내부에 있는 내용이 한 번에 전송됨. 고로 잘 감싸줘야 함!-->
+      <!--그러나, 최근들어 리액트 뷰. 앵귤러 등등..은 form 태그 사용하지 않는 방식 많이 사용함. spa 방식 사용.  -->
+      <div>
+        <label for="email">이메일</label>
+        <!--용도 잘 연결해주기-->
+        <input type="email" id="email" />
+      </div>
+      <div>
+        <label for="pwd">비밀번호</label>
+        <input type="password" id="pw" />
+        <!--type을 password로 해줘야 입력이 암호화되어 보여짐-->
+      </div>
+      <div>
+        <button>로그인</button>
+      </div>
+    </form>
+    <!--같은 정보를 입력받는 것을 묶어주는 태그가 form 태그-->
+
+    <h4>당신이 배우고 싶은 언어는? (다중 선택 가능)</h4>
+    <div>
+      <input type="checkbox" name="chk_lang" id="chk_html" />
+      <!--checkbox 타입 사용. 이때는 input과 label태그가 한 쌍으로 작용, for로 잘 연결해줘야 함-->
+      <label for="chk_html">HTML</label>
+      <input type="checkbox" name="chk_lang" id="chk_css" />
+      <label for="chk_css">CSS</label>
+      <!--for로 id 연결해줘야 글자를 클릭해도 체크박스 적용됨. 연결 안하면 글자 클릭했을 때 체크박스 적용 안됨-->
+      <input type="checkbox" name="chk_lang" id="chk_js" />
+      <label for="chk_js">JavaScript</label>
+      <!--name 속성을 동일하게 맞춰줌으로써 해당 체크박스가 같은 그룹의 체크박스에 속함을 의미할 수 있음-->
+    </div>
+    <h4>당신이 배우고 싶은 언어는? (하나만 선택 가능)</h4>
+    <!--같은 그룹에 속하게끔 하는 것 주의!-->
+    <input type="radio" name="rdo_lang" id="rdo_html" />
+    <label for="rdo_html">HTML</label>
+    <input type="radio" name="rdo_lang" id="rdo_css" />
+    <label for="rdo_css">CSS</label>
+    <input type="radio" name="rdo_lang" id="rdo_js" />
+    <label for="rdo_js">JavaScript</label>
+    <div>
+      <label for="favoriteColor">가장 좋아하는 색상은?</label>
+      <input type="color" id="favoriteColor" value="" />
+      <!--색상 선택할 수 있게끔 함. hex값 코드로 값이 들어가게 됨-->
+    </div>
+    <div>
+      <label for="bornDate">태어난 날짜는?</label>
+      <input type="date" id="bornDate" />
+      <!--캘린더가 화면 상에 나타남-->
+      <!--항상 for과 맞춰주는 것 습관화 하기!-->
+    </div>
+    <div>
+      <label for="arrivalDateTime">입국한 날짜/시간은?</label>
+      <input type="datetime-local" name="" id="arrivalDateTime" />
+      <!--날짜 및 시간 입력 가능-->
+    </div>
+    <div>
+      <form action="">
+        <!--form 태그 내부에서 email input 사용할 경우, @가 입력에 없을 때 이를 알려줌. 자동 체크는 form 태그 내부에 있을 때, 그리고 button type이 submit일 때 작동됨-->
+        <label for="userEmail">이메일 주소는?</label>
+        <input type="email" name="" id="userEmail" />
+        <button type="submit">저장</button
+        ><!--type이 submit일 경우, 버튼 눌렸을 때 같이 묶인 모든 input 정보가 action 측의 서버 주소로 전송됨-->
+      </form>
+      <!--최근에는 form 태그 잘 안 쓰는데, form 태그 안 쓸 경우 자동 체크 기능 안되는 단점 존재-->
+      <!--웹 디자인과 경고창의 UI가 이질적인 경우, form 태그 안쓰는 경우 많음-->
+    </div>
+    <div>
+      <label for="attachment">파일 첨부</label>
+      <input type="file" id="attachment" />
+      <!--파일 선택 위함-->
+    </div>
+    <div>
+      <input type="hidden" name="email" value="john@gmail.com" />
+      <!--사용자에겐 안보이지만, 정보 입력할 수 있는 필드. 즉, 사용자가 정보를 입력해서 쓰는 게 아님.-->
+      <!--사용자의 입력을 받기 위한 용도가 아닌, 대부분 개발자가 사용하기 위해 쓰는 태그-->
+      <!--숨겨진 값을 함께 전송해줄 수 있음-->
+    </div>
+    <div>
+      <img src="./img/dog.jpeg" alt="" style="width: 100px; height: auto" />
+      <!--실제 프록그래밍 할 때는 alt값 꼭 넣어줘야 함-->
+      <input
+        type="image"
+        src="./img/dog.jpeg"
+        style="width: 100px; height: auto"
+      />
+      <!--이미지가 버튼, 링크의 역할을 수행하게끔 할 수 있음. 근데 사실상 실무에서 이 기능 거의 안쓴다고 함.-->
+    </div>
+    <div>
+      <label for="yearmonth">생년/월</label>
+      <input type="month" id="yearmonth" />
+      <!--년, 월만 입력할 수 있음-->
+    </div>
+    <div>
+      <label for="">당신의 나이는?</label>
+      <input type="number" min="0" max="100" />
+      <!--숫자 입력을 받기 위함. 최대, 최소값 등 지정 가능-->
+      <!--타입에 따라 모바일 환경에서 뜨는 폼이 다르니 타입 잘 지정해주는 게 중요!!!-->
+    </div>
+    <div>
+      <label for="userPass">비밀번호</label>
+      <input type="password" name="" id="userPass" />
+    </div>
+    <div>
+      <form action="">
+        <label for="phone">전화번호</label>
+        <input type="tel" id="phone" value="" pattern="^010-\d{4}-\d{4}$" />
+        <button type="submit">저장</button>
+        <!--전화번호 입력 위함. 그러나 숫자 아닌 문자가 들어와도 못 막음-->
+        <!--그러므로 나중에 javascript 등에서 들어온 value값이 맞는 형태의 값인지 확인하는 코드 짜야 함. 나라마다 형식 다르므로 자동 체크 못함 -->
+        <!--그러나, pattern 속성 통해 특정 정규식 지정해줌으로써 체크 가능-->
+        <!--\d는 숫자를 의미. 나중에 js 배우면 알게 될 것-->
+        <!--tel의 경우에도 모바일과 뜨는 화면이 다르니 타입 잘 지정해줘야 함. 다른 input type들도 마찬가지-->
+      </form>
+    </div>
+    <div>
+      <label for="general">일반 문자</label>
+      <input type="text" name="" id="general" />
+      <!--text는 어떤 입력이든 받을 수 있음-->
+    </div>
+    <div>
+      <label for="visitTime">예약시간</label>
+      <input type="time" id="visitTime" />
+      <!--시간 입력 받기 가능-->
+    </div>
+    <div>
+      <form action="">
+        <label for="">블로그 주소는?</label>
+        <input type="url" name="" id="" />
+        <button type="submit">저장</button>
+      </form>
+      <!--url input역시 form 태그 내부에서, buttom 태그와 사용할 경우 자동 체크 가능-->
+    </div>
+    <div>
+      <label for="weekPlan">주간 계획(몇주차)</label>
+      <input type="week" id="weekPlan" />
+      <!-- 주로 입력 받을 수 있음-->
+    </div>
+    <div>
+      <label for="searchKeyword">검색조건</label>
+      <input type="search" id="searchKeyword" />
+      <!--search input의 경우, 옆에 x 떠서 입력하던 것 바로 지울 수 있음-->
+    </div>
+  </body>
+</html>
