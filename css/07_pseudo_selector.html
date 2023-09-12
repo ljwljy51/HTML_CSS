@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*가상클래스 : 사용자의 특정 행위에 대해 발생하는 상황을 예상하고, 그 상황에 맞춘 클래스를 만들어두는 것*/
+      a {
+        text-decoration: none;
+      }
+
+      a:hover {
+        /*가상클래스 선택자*/
+        /*a태그에 사용자가 그 요소 위에 마우스 올려뒀을 때만 이 요소 적용*/
+        color: white;
+        background-color: blue;
+      }
+
+      button:hover {
+        color: white;
+        background-color: red;
+      }
+
+      a:link {
+        /*방문 이력이 없는 곳인 경우*/
+        color: blue;
+      }
+
+      /*방문한 적 있는 링크*/
+      a:visited {
+        color: green;
+      }
+
+      /*마우스가 포커스 됐을 때*/
+      input:focus {
+        border: 5px solid red;
+      }
+
+      table,
+      th,
+      td {
+        /*쉼표 통해 여러 곳에 적용*/
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      tbody > tr:nth-child(2n) {
+        /*table 뿐 아니라 li 등 반복되는 태그 형태에서 사용 가능*/
+        /*자식선택자, 가상클래스 사용해 적용. even, odd 사용 가능*/
+        background-color: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://naver.com">네이버</a>
+    <a href="https://google.com">구글</a>
+    <a href="http://a;sodigja.com">가짜 사이트</a>
+    <br />
+    <button>조회</button>
+    <br />
+    <input type="text" />
+    <br />
+    <table>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>연락처</th>
+          <th>이메일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>유재석</td>
+          <td>010-0000-0000</td>
+          <td>ryu@gmail.com</td>
+        </tr>
+        <tr>
+          <td>김종국</td>
+          <td>010-0000-0001</td>
+          <td>kim@gmail.com</td>
+        </tr>
+        <tr>
+          <td>송지효</td>
+          <td>010-0000-0002</td>
+          <td>song@gmail.com</td>
+        </tr>
+        <tr>
+          <td>양세찬</td>
+          <td>010-0000-0003</td>
+          <td>yang@gmail.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
