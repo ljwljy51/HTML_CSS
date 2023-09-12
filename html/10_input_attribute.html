@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <input type="text" name="" id="" value="ABC" />
+        <!--Value 속성 통해 미리 값 세팅 가능-->
+        <!--사용자가 입력한 값이 value속성으로 들어가고, 나중에 서버에 그 값이 전송됨-->
+        <!--JavaScript에서 value값을 얻어올 수 있음-->
+      </div>
+      <div>
+        <input type="text" name="" id="" value="ABC" readonly />
+        <!--readonly통해 읽기만 가능하게 할 수 있음-->
+      </div>
+      <div>
+        <input type="text" name="" id="" value="ABC" disabled />
+      </div>
+      <!--readonly의 경우, form태그와 submit 통해 value 값 전송 가능하지만, disabled된 것들은 form 태그 통해 전송되지 않음-->
+      <!--form태그 사용 안할 때는 disabled값 전송할 수 있는 방법 있긴 함-->
+      <button type="submit">저장</button>
+    </form>
+    <div>
+      <input type="text" name="" id="" maxlength="4" />
+      <!--최대 입력 가능 글자 수 제한-->
+    </div>
+    <div>
+      <input
+        type="tel"
+        style="width: 100%"
+        placeholder="하이픈(-) 없이 숫자만 입력하세요. 예) 01000001111"
+      />
+      <!--place holder값이 input 박스 안에 표시됨 (가이드 역할)-->
+      <!--실무에서 많이 씀!-->
+    </div>
+    <div>
+      <form action="">
+        <label for="userId">아이디</label>
+        <input
+          type="text"
+          name="username"
+          id="userId"
+          required
+          autocomplete="on"
+          autofocus="on"
+        />
+        <!--autofocus 통해 바로 해당 란에 focus 가있게 할 수 있음-->
+        <!--required는 필수 입력값일 때 사용 가능. 그러나, form 태그 안에서만 작용됨-->
+        <label for="userId">비밀번호</label>
+        <input type="password" name="" id="userPass" required />
+        <button type="submit">저장</button>
+      </form>
+    </div>
+    <div>
+      <input type="text" name="email" id="" autocapitalize="on" />
+      <!--지금까지 사용한 모든 브라우저에서의 email 정보가 자동완성될 수 있게끔 뜸-->
+      <!--모든 사이트에서 해당 정보 공유됨-->
+      <!--name 속성에 주목! name값이 매우 중요-->
+      <!--name에 대한 표준 가이드도 존재함-->
+    </div>
+    <div>
+      <input type="text" name="phone" id="" autocapitalize="on" />
+    </div>
+  </body>
+</html>
