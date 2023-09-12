@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="">살고 있는 지역은?</label>
+    <select name="" id="">
+      <!--옵션이 굉장히 많을 때 사용하면 좋음-->
+      <!--그러나, 옵션 적을 때는 radio 등을 쓰는 게 사용자 입장에서 훨씬 편함-->
+      <!--여러 옵션 중 하나 or 여러 개 선택 가능-->
+      <option value="02">서울</option>
+      <!--사용자에게는 서울이라 보이지만, 값 넘길 때는 02로 넘겨짐-->
+      <option value="051">부산</option>
+      <option value="064">제주</option>
+    </select>
+    <br />
+    <select name="" id="" multiple>
+      <!--여러 개 선택하게끔 할 수 있지만, 사용자 입장에서 알기 어려우므로 사용 지양하기-->
+      <!--실무에서 안씀-->
+      <option value="02">서울</option>
+      <option value="051">부산</option>
+      <option value="064">제주</option>
+    </select>
+    <div>
+      <textarea name="" id="" rows="10" style="width: 100%"></textarea>
+      <!--여러 줄 입력 위함-->
+      <!--cols, rows는 어떻게 보이게 할지를 결정. 실제로는 더 많이 입력 가능-->
+    </div>
+    <div>
+      <fieldset>
+        <!--입력 정보 구분하고 싶을 때 filedset 사용 가능-->
+        <legend>개인정보</legend>
+        <!--legend 통해 어떤 정보인지 나타낼 수 있음-->
+        <div>
+          <label for="name">이름</label>
+          <input type="text" id="name" />
+        </div>
+        <div>
+          <label for="tel">연락처</label>
+          <input type="tel" id="tel" />
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>학력정보</legend>
+        <div>
+          <label for="university">대학교</label>
+          <input type="text" id="university" />
+        </div>
+        <div>
+          <label for="year">졸업년도</label>
+          <input type="tel" id="year" />
+        </div>
+      </fieldset>
+    </div>
+    <div>
+      <input list="browsers" id="browser1" />
+      <!--input태그의 list 옵션에 데이터리스트 태그의 아이디를 부여함으로써 option들 선택할 수 있게끔 할 수 있음-->
+      <!--즉, input box인데 select의 개념이 복합적으로 들어가 있는 것-->
+      <!--옵션이 매우 많을 때 사용하면 유용함 (국가 선택 등..)-->
+      <!--그러나, 기존 값 지울 수 있기에 사용자의 실수 가능성 존재. (문자 빼먹거나..)-->
+      <!--최종적으로 값 저장 전에 JavaScript에서 값 제대로 됐는지 확인하는 코드 작성 필요-->
+      <datalist id="browsers">
+        <option value="Internet Explorer">Internet Explorer</option>
+        <option value="Firefox">Firefox</option>
+        <option value="Chrome">Chrome</option>
+        <option value="Opera">Opera</option>
+        <option value="Safari">Safari</option>
+      </datalist>
+    </div>
+    <div>
+      <input list="browsers" id="browser2" />
+      <!--list 옵션 같게 줌으로써 데이터리스트 같이 쓸 수 있음-->
+      <!-- select box로는 이렇게 할 수 없음-->
+    </div>
+  </body>
+</html>

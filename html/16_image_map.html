@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--map 태그 통해 한 이미지 당 원하는 위치에 마크해둘 수 있음-->
+    <!--이때, map name과 img 태그의 usemap 속성에 #뒤 값 같게 설정하면 됨-->
+    <img src="./img/ikea_circle.png" usemap="#image-map" />
+
+    <map name="image-map">
+      <area
+        target="_blank"
+        alt=""
+        title=""
+        href="https://www.ikea.com/kr/ko/p/tjena-magazine-file-white-90395417/"
+        coords="88,203,18"
+        shape="circle"
+      />
+      <!--area tag로 만들어짐-->
+      <!--x, y, z좌표 순서-->
+      <!--모양, 새 탭 어떻게 띄울 건지는 알아서 선택 가능-->
+      <area
+        target="_blank"
+        alt=""
+        title=""
+        href="https://www.ikea.com/kr/ko/p/langfjaell-seat-shell-gunnared-beige-00320520/"
+        coords="179,283,12"
+        shape="circle"
+      />
+      <area
+        target="_blank"
+        alt=""
+        title=""
+        href="https://www.ikea.com/kr/ko/p/anfallare-table-top-bamboo-80465142/"
+        coords="281,313,10"
+        shape="circle"
+      />
+      <area
+        target="_blank"
+        alt=""
+        title=""
+        href="https://www.ikea.com/kr/ko/p/billy-oxberg-bookcase-with-doors-white-s09281067/"
+        coords="82,316,17"
+        shape="circle"
+      />
+    </map>
+  </body>
+</html>
+<!--image-map.net 참고-->
