@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .font1 {
+        font-family: "Courier New", Courier, monospace;
+        /*Courier New가 없으면 Courier가, 그것도 없으면 monospace가 적용됨*/
+      }
+      .font2 {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /*이탤릭체*/
+      .italic {
+        font-style: italic;
+      }
+      /*기본 글씨체를 기울여 보이게 하는 것*/
+      .oblique {
+        font-style: oblique;
+      }
+    </style>
+  </head>
+  <body>
+    <!--글꼴 스타일링-->
+    <!--브라우저, 운영체제마다 살짝씩 다르게 보임-->
+    <h1 style="font-family: verdana">verdana 폰트</h1>
+    <h1 style="font-family: courier">courier 폰트</h1>
+    <h1 class="font1">
+      현재 브라우저에 Courier New 폰트가 있다면 Courier New가, 없다면 Courier가,
+      없다면 monospace폰트가 적용됨
+    </h1>
+
+    <!--폰트 스타일-->
+    <h1 class="font2">Arial > Helvetica > sans-serif</h1>
+    <h1 class="italic">이탤릭체로 보여집니다.</h1>
+    <h1 class="oblique">기본 글씨가 기울어져 보임</h1>
+
+    <!--폰트 굵기-->
+    <p style="font-weight: normal">font-weight: normal</p>
+    <p style="font-weight: 400">font-weight: 400</p>
+
+    <!--굵은 폰트. 숫자값으로는 700과 동일-->
+    <p style="font-weight: bold">font-weight: bold</p>
+
+    <!--bolder: 상대적인 값-->
+    <div style="font-weight: 100">
+      <p style="font-weight: bolder">부모가 100일때, bolder는 400</p>
+    </div>
+    <div style="font-weight: 200">
+      <p style="font-weight: bolder">부모가 200일때, bolder는 400</p>
+    </div>
+    <div style="font-weight: 300">
+      <p style="font-weight: bolder">부모가 300일때, bolder는 400</p>
+    </div>
+    <div style="font-weight: 400">
+      <p style="font-weight: bolder">부모가 400일때, bolder는 700</p>
+    </div>
+    <div style="font-weight: 500">
+      <p style="font-weight: bolder">부모가 500일때, bolder는 700</p>
+    </div>
+    <div style="font-weight: 600">
+      <p style="font-weight: bolder">
+        부모가 600 이상일때, bolder는 무조건 900
+      </p>
+    </div>
+
+    <!--lighter도 마찬가지로 상대적인 값-->
+
+    <!--폰트 크기-->
+    <!--절대값: xx-small, x-smal,, small, medium, large, x-large, xx-large으로 줄 수 있음-->
+    <!--상대값: larger, smaller으로도 줄 수 있음-->
+    <!-- 길이 값: em(부모 요소의 폰트 크기 기준),rem(루트 요소의 폰트 크기 기준), px, pt(1pt=72인치..) -->
+    <!--퍼센트(백분율 값)도 존재-->
+    <p style="font-size: 10px">font-size: 10px</p>
+    <p style="font-size: 8pt">font-size: 8pt</p>
+    <!-- 대부분의 브라우저는 폰트 크기의 기본값으로 12pt=16px=1em=100% 사용-->
+    <!--실무에서는 보통 em, rem 등을 많이 사용함(PC, 모바일 환경 차이..)-->
+  </body>
+</html>

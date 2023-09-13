@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 300px;
+        height: 100px;
+        margin: 10px;
+        padding: 10px;
+        border: 10px solid green;
+      }
+
+      .box-cb {
+        box-sizing: content-box; /*content 박스 기준으로 박스 사이즈 결정하겠다는 것*/
+      }
+      .box-bb {
+        box-sizing: border-box; /*border까지 포함한 걸 기준으로 박스 사이즈 결정하겠다는 것*/
+      } /*f12눌러 개발자모드로 봐서 상세 속성 보기*/
+
+      /*px 단위*/
+      /*퍼센트(백분율). 부모 요소를 기준으로 상대값 결정*/
+    </style>
+  </head>
+  <body>
+    <div class="box-cb">CSS 박스 모델- content-box</div>
+    <div class="box-bb">CSS 박스 모델- border-box</div>
+    <div style="width: 100%; height: 200px; background-color: green">
+      <div
+        style="
+          width: 50%;
+          max-width: 900px;
+          min-width: 200px;
+          height: 50%;
+          background-color: red;
+        "
+      ></div>
+      <!--최대,최소 크기 지정 가능-->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--CSS 색상 적용-->
+    <!-- 1. 색상 명에 해당하는 키워드 사용-->
+    <!--실무에서는 색상명 잘 안씀-->
+    <h1 style="background-color: blue">파란색 배경색 적용</h1>
+    <p style="color: orange">오렌지색 글씨 적용</p>
+
+    <!--2. 색상값 사용-->
+    <!--RGB 값-->
+    <!--0~255-->
+    <h1 style="color: rgb(255, 0, 0)">빨간색</h1>
+    <h1 style="color: rgb(0, 255, 0)">초록색</h1>
+    <h1 style="color: rgb(0, 0, 255)">파란색</h1>
+    <!--vsc에서는 편하게 설정 가능-->
+
+    <!--2-1. RGBA-->
+    <!--여기서 A는 Alpha로, 투명도를 의미-->
+    <h1 style="color: rgba(255, 0, 0, 0.5)">빨간색</h1>
+
+    <!--3. HEX 색상값-->
+    <!--16진수 표기법. 광원(빛의 3원색)인 RGB의 조합으로 표기-->
+    <!-- 0 -> HEX '00'-->
+    <!-- 255 -> HEX 'FF'-->
+    <h1 style="color: #ff0000">빨간색</h1>
+    <h1 style="color: #00ff00">초록색</h1>
+    <h1 style="color: #0000ff">파란색</h1>
+
+    <!--HEX에서는 투명도 부여 불가-->
+
+    <!--4. HSL 값-->
+    <!-- 색조(hue), 채도(saturation), 밝기(lightness) 3가지 값으로 구성-->
+    <!-- 색조: 0~360, 360은 빨간색, 120은 초록색, 240은 파란색-->
+    <!-- 채도: 0~100%, 0%은 회색 음영-->
+    <!-- 밝기: 0~100%, 100%은 가장 밝은 값-->
+
+    <!--HSL은 실무에서 거의 안씀. HEX랑 RGB정도를 씀-->
+    <h1 style="color: hsl(360, 100%, 50%)">빨간색</h1>
+
+    <!--4-1. HSLA-->
+    <h1 style="color: hsla(360, 100%, 50%, 0.2)">빨간색</h1>
+  </body>
+</html>
