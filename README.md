@@ -1,5 +1,5 @@
 # Web_programming
-for web programming study
+for HTML, CSS study
 </br>
 following this lecture: 
 </br>
