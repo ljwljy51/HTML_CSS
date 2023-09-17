@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: row; /*x축(좌에서 우로)*/
+        /*flex-direction: column; /*x축(좌에서 우로)*/
+        /*flex-direction: row-reverse; /*x축(우에서 좌로)*/
+        border: 3px dotted black;
+        justify-content: flex-start; /*시작점으로 정렬. row-reverse일 경우 오른쪽 정렬*/
+        /*justify-content: flex-end;*/
+        /*보통 space-between 많이 씀*/
+      }
+
+      .item {
+        background-color: greenyellow;
+        border: 2px solid blue;
+        width: 30px; /*컨테이너의 너비가 아이템 너비보다 큰 상태. 자동적으로 왼쪽 정렬됨*/
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+    </div>
+    <script></script>
+  </body>
+</html>
+
+<!--grid 레이아웃도 존재하나, 아직은 실무에서 많이 사용되지 않음. 그리드 레이아웃은 2차원 레이아웃 시스템. flexbox는 1차원적 레이아웃 시스템-->
