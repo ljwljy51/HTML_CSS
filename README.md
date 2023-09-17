@@ -1,4 +1,4 @@
-# Web_programming
+# HTML_CSS
 for HTML, CSS study
 </br>
 following this lecture: 
